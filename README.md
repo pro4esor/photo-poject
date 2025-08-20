@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lumina Studio - Фотографічна студія
 
-## Getting Started
+Сучасний веб-сайт для фотографічної студії Lumina Studio, створений з використанням Next.js 15, React 19 та Tailwind CSS.
 
-First, run the development server:
+## 🚀 Особливості
+
+- **Сучасний дизайн** - Елегантний та професійний інтерфейс
+- **Адаптивність** - Повністю адаптивний дизайн для всіх пристроїв
+- **Швидкість** - Оптимізований для швидкого завантаження
+- **SEO-friendly** - Готовий для пошукової оптимізації
+- **Форми зворотного зв'язку** - Інтерактивні форми для замовлень
+- **Галерея робіт** - Портфоліо з фільтрацією по категоріях
+
+## 🛠 Технології
+
+- **Next.js 15** - React фреймворк
+- **React 19** - UI бібліотека
+- **TypeScript** - Типізація
+- **Tailwind CSS 4** - CSS фреймворк
+- **Radix UI** - Доступні UI компоненти
+- **Lucide React** - Іконки
+- **React Day Picker** - Календар
+
+## 📦 Встановлення
 
 ```bash
+# Клонування репозиторію
+git clone <repository-url>
+cd my-photo-project
+
+# Встановлення залежностей
+npm install
+
+# Запуск в режимі розробки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Деплой
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Vercel (Рекомендовано)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Підключіть ваш GitHub репозиторій до Vercel
+2. Налаштуйте змінні середовища:
+   ```
+   NEXT_PUBLIC_SITE_URL=https://your-domain.com
+   NEXT_PUBLIC_SITE_NAME=Lumina Studio
+   NEXT_PUBLIC_CONTACT_EMAIL=info@luminastudio.ua
+   NEXT_PUBLIC_CONTACT_PHONE=+380671234567
+   ```
+3. Деплой відбудеться автоматично
 
-## Learn More
+### Netlify
 
-To learn more about Next.js, take a look at the following resources:
+1. Підключіть репозиторій до Netlify
+2. Налаштуйте build команду: `npm run build`
+3. Налаштуйте publish директорію: `.next`
+4. Додайте змінні середовища
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Інші платформи
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Проєкт можна розгорнути на будь-якій платформі, що підтримує Next.js.
 
-## Deploy on Vercel
+## 📁 Структура проєкту
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── ui/           # UI компоненти
+│   │   ├── figma/        # Компоненти для зображень
+│   │   ├── About.tsx     # Секція "Про нас"
+│   │   ├── BookingForm.tsx # Форма замовлення
+│   │   ├── Footer.tsx    # Підвал
+│   │   ├── Header.tsx    # Заголовок
+│   │   ├── Hero.tsx      # Головна секція
+│   │   ├── Portfolio.tsx # Портфоліо
+│   │   ├── Services.tsx  # Послуги
+│   │   └── Testimonials.tsx # Відгуки
+│   ├── globals.css       # Глобальні стилі
+│   ├── layout.tsx        # Основний layout
+│   └── page.tsx          # Головна сторінка
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Налаштування
+
+### Кольори та теми
+
+Основні кольори налаштовані в `src/app/globals.css`:
+- `--gold`: #d4af37 (основний золотий колір)
+- `--background`: #ffffff (фон)
+- `--foreground`: #1a1a1a (текст)
+
+### Зображення
+
+Замініть URL зображень в компонентах на ваші власні:
+- Hero секція
+- Портфоліо
+- Команда
+- Послуги
+
+### Контактна інформація
+
+Оновіть контактну інформацію в компонентах:
+- `BookingForm.tsx`
+- `Footer.tsx`
+- `Header.tsx`
+
+## 📝 Скрипти
+
+```bash
+npm run dev      # Запуск в режимі розробки
+npm run build    # Збірка для продакшену
+npm run start    # Запуск продакшен версії
+npm run lint     # Перевірка коду
+```
+
+## 🔧 Оптимізація
+
+Проєкт вже оптимізований для продакшену:
+- ✅ Видалені невикористані компоненти
+- ✅ Оптимізовані імпорти
+- ✅ Налаштовані ESLint правила
+- ✅ Мінімізовані залежності
+
+## 📞 Підтримка
+
+Для питань та підтримки звертайтеся до розробника.
+
+---
+
+© 2024 Lumina Studio. Всі права захищені.
