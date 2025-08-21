@@ -1,8 +1,11 @@
+"use client"
 import { Button } from "./ui/button";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Camera, ArrowRight, Star, Users, Award } from "lucide-react";
 
 export function Hero() {
+
+
   const stats = [
     { icon: Users, number: "1000+", label: "Задоволених клієнтів" },
     { icon: Camera, number: "3000+", label: "Проведених зйомок" },
@@ -10,8 +13,15 @@ export function Hero() {
     { icon: Star, number: "4.9", label: "Рейтинг" }
   ];
 
+  const scrollToSection = (id: string) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center bg-white" id="hero">
+    <section className="section-padding min-h-screen flex items-center justify-center bg-white" id="hero">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -32,12 +42,20 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gold hover:bg-gold/90 text-white">
+              <Button 
+                size="lg" 
+                className="bg-gold hover:bg-gold/90 text-white"
+                onClick={() => scrollToSection('#contact')} // або інша секція
+              >
                 <Camera className="h-5 w-5 mr-2" />
                 Замовити зйомку
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => scrollToSection('#portfolio')} // або інша секція
+              >
                 Переглянути роботи
               </Button>
             </div>
@@ -66,19 +84,6 @@ export function Hero() {
                 height={720}
                 className="w-full h-full object-cover"
               />
-            </div>
-            
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-6 border">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                  <Camera className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">Lumina Studio</div>
-                  <div className="text-sm text-muted-foreground">Професійна фотозйомка</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
