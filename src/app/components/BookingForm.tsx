@@ -257,8 +257,10 @@ export function BookingForm() {
             {/* Studio Photo */}
             <Card className="border overflow-hidden">
               <div className="aspect-[4/3]">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1537344622304-ef06c27e8fd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMHN0dWRpbyUyMGludGVyaW9yJTIwbW9kZXJufGVufDF8fHx8MTc1NTYxMDE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                <ImageWithFallback    
+                  width={1080}
+                  height={720}  
+                  src="https://images.unsplash.com/photo-1647969577935-78d24f255530?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Lumina Studio інтер'єр"
                   className="w-full h-full object-cover"
                 />

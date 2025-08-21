@@ -126,25 +126,27 @@ export function Portfolio() {
                 <Card className="group cursor-pointer border hover:shadow-lg transition-all duration-300">
                   <div className="aspect-square overflow-hidden rounded-lg">
                     <ImageWithFallback
+                      width={1080}
+                      height={720}
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                  {/* <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                     <div className="text-center text-white">
                       <Eye className="h-8 w-8 mx-auto mb-2" />
                       <h3 className="font-semibold text-lg">{item.title}</h3>
                       <p className="text-sm text-white/80">{item.client}</p>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="absolute top-4 left-4">
+                  {/* <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-white/90 text-foreground">
                       {categories.find(cat => cat.id === item.category)?.name}
                     </Badge>
-                  </div>
+                  </div> */}
                 </Card>
               </DialogTrigger>
 
@@ -157,6 +159,8 @@ export function Portfolio() {
                 </DialogHeader>
                 <div className="relative">
                   <ImageWithFallback
+                    width={1080}
+                    height={720}
                     src={item.image}
                     alt={item.title}
                     className="w-full max-h-[70vh] object-contain rounded-lg"

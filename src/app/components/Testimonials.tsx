@@ -91,6 +91,8 @@ export function Testimonials() {
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                     <ImageWithFallback
+                      width={1080}
+                      height={720}
                       src={testimonials[currentSlide].image}
                       alt={testimonials[currentSlide].name}
                       className="w-full h-full object-cover"

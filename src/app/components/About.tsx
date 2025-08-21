@@ -65,6 +65,8 @@ export function About() {
           <div className="order-2 lg:order-1">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
               <ImageWithFallback
+                width={1080}
+                height={720}
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBwaG90b2dyYXBoeSUyMHN0dWRpb3xlbnwxfHx8fDE3NTU2MDk2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Команда Lumina Studio"
                 className="w-full h-full object-cover"
@@ -122,6 +124,8 @@ export function About() {
                 <ImageWithFallback
                   src={member.image}
                   alt={member.name}
+                  width={1080}
+                  height={720}
                   className="w-full h-full object-cover"
                 />
               </div>

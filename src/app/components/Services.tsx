@@ -87,16 +87,10 @@ export function Services() {
             <Card key={service.id} className={`border hover:shadow-lg transition-all duration-300 ${
               service.popular ? 'ring-2 ring-gold ring-opacity-20' : ''
             }`}>
-              {service.popular && (
-                <div className="absolute top-4 right-4 z-10">
-                  <Badge className="bg-gold text-white">
-                    Популярно
-                  </Badge>
-                </div>
-              )}
-              
               <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                 <ImageWithFallback
+                  width={1080}
+                  height={720}  
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
