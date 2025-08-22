@@ -85,7 +85,7 @@ export function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <Card key={service.id} className={`border hover:shadow-lg transition-all duration-300 ${
-              service.popular ? 'ring-2 ring-gold ring-opacity-20' : ''
+              service.popular ? 'ring-gold ring-opacity-20' : ''
             }`}>
               <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                 <ImageWithFallback
