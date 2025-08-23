@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Badge } from "./ui/badge";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Camera, Heart, Users, Package, TreePine, Video, ArrowRight, Clock, Check } from "lucide-react";
 

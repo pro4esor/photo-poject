@@ -23,6 +23,6 @@ const PopoverContent = React.forwardRef<
     {...props}
   />
 ))
-PopoverContent.displayName = ShadPopoverContent.displayName
+PopoverContent.displayName = "PopoverContent"
 
 export { Popover, PopoverTrigger, PopoverContent, PopoverAnchor }

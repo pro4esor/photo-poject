@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Calendar as ShadCalendar } from "@/components/ui/calendar"
+import { DayPicker } from "react-day-picker"
 import { cn } from "./utils"
 import { buttonVariants } from "./button"
 
@@ -11,9 +11,9 @@ function Calendar({
   classNames,
   showOutsideDays = true,
   ...props
-}: React.ComponentProps<typeof ShadCalendar>) {
+}: React.ComponentProps<typeof DayPicker>) {
   return (
-    <ShadCalendar
+    <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn(
         "p-3 max-w-full sm:p-4", 
@@ -62,12 +62,16 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ className, ...iconProps }) => (
-          <ChevronLeft className={cn("size-5 sm:size-6", className)} {...iconProps} />
-        ),
-        IconRight: ({ className, ...iconProps }) => (
-          <ChevronRight className={cn("size-5 sm:size-6", className)} {...iconProps} />
-        ),
+        Chevron: ({ className, orientation, ...iconProps }) => {
+          if (orientation === "left") {
+            return (
+              <ChevronLeft className={cn("size-5 sm:size-6", className)} {...iconProps} />
+            )
+          }
+          return (
+            <ChevronRight className={cn("size-5 sm:size-6", className)} {...iconProps} />
+          )
+        },
       }}
       {...props}
     />
