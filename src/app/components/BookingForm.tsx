@@ -109,10 +109,10 @@ export function BookingForm() {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Зв'яжіться з нами
+            Зв&apos;яжіться з нами
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Готові обговорити ваш проект? Зв'яжіться з нами, щоб отримати 
+            Готові обговорити ваш проект? Зв&apos;яжіться з нами, щоб отримати 
             персональну консультацію та розрахунок вартості.
           </p>
         </div>
@@ -126,7 +126,7 @@ export function BookingForm() {
                 Замовити зйомку
               </CardTitle>
               <p className="text-muted-foreground">
-                Заповніть форму і ми зв'яжемося з вами протягом години
+                Заповніть форму і ми зв&apos;яжемося з вами протягом години
               </p>
             </CardHeader>
             
@@ -138,17 +138,17 @@ export function BookingForm() {
                     Дякуємо за звернення!
                   </h3>
                                       <p className="text-muted-foreground">
-                      Ми зв'яжемося з вами найближчим часом
+                      Ми зв&apos;яжемося з вами найближчим часом
                     </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-10">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Повне ім'я *</Label>
+                      <Label htmlFor="name">Повне ім&apos;я *</Label>
                       <Input
                         id="name"
-                        placeholder="Ваше повне ім'я"
+                        placeholder="Ваше повне ім&apos;я"
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
                         required
